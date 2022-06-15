@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./index.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Game JavaScript</title>
+</head>
+<body style="overflow:hidden">
+  
+  <div class="scoreContainer transparent" style="position:absolute;bottom:50px;display:flex;width:100%;justify-content: center;">
+    <h3 style="margin-right:20px" class="score">Pontos:    <span id="score">0</span></h3>
+    <h3 class="score">Recorde:    <span id="maxScore">0</span></h3>
+  </div>
+
+  <div class="fullscreen v-center column">
+    <div class="stack" id="pilha">
+      <div class="layer">
+        <canvas id="mainCanvas" width="800px" height="1600px" class="canvas">
+      
+        </canvas>
+      </div>
+      <div class="layer">
+        <div id="gameover" class="d-none gameover">
+          <div class="column v-center">
+            <h1>Game Over!</h1>
+            <button id="gameoverbutton" class="btn">Jogar Novamente</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div-botoes">
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+          <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+        </svg>
+      </button>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+          <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+        </svg>
+      </button>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+          <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="./js/Main.mjs"></script>
+</body>
+</html>
